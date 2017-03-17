@@ -1,12 +1,10 @@
 \documentclass[11pt]{article}
-%\usepackage{helvet}
 \usepackage{lastpage, fancyhdr,color,amsmath,amssymb,amsfonts,amscd, graphicx,latexsym,multirow}
 \usepackage{makecell}
 \usepackage{lipsum}
 \usepackage{eurosym}
 \usepackage[all]{xy}
 \pagestyle{empty}
-%\usepackage[turkish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \setlength\voffset{-1in}
@@ -14,40 +12,20 @@
 \setlength\topmargin{3cm}
 \setlength\oddsidemargin{2.5cm}
 \setlength\textheight{8in}
-\setlength\textwidth{6.51in}
-\setlength\footskip{1in}
+\setlength\textwidth{6.51in}\setlength\footskip{1in}
 \setlength\headheight{12pt}
 \setlength\headsep{0.06in}
-\usepackage{tikz}
-%plus4mm minus3mm}
 \usepackage{caption, subcaption, amsfonts}
 \usepackage{setspace}
-\usepackage{epstopdf}
+\usepackage{epstopdf,sectsty}
 \usepackage{relsize}
 \usepackage{pgf, float}
 \usepackage{url}
-\newcommand{\gal}{Gal({\mathbb Q})}
-\newcommand{\N}{\mathbb N}
-\newcommand{\F}{\mathcal F}
-\renewcommand{\H}{\mathcal H}
-\newcommand{\Q}{\mathbb Q}
-\newcommand{\Z}{\mathbb Z}
-\newcommand{\R}{\mathbb R} 
-\newcommand{\C}{\mathbb C}
-\newcommand{\p}{\mathbb P}
-\newcommand{\B}{\mathbb B}
-\def\modorb{\mbox{$\otimes\hspace{-1.5mm}-\!\!\!-\!\!\!-\hspace{-1.5mm}\circledast$}}
-\hyphenation{or-bi-fold}
-%\input{defs.tex}
 
-%\usepackage[usenames,dvipsnames]{color}
-%\usepackage{epsfig}
-
-
-% ’
 
 \definecolor{light-gray}{gray}{0.55}
-\newcommand\Note[1]{\textcolor{red}{{#1}}}
+
+
 \begin{document}
 \pagestyle{fancy}
    \lhead{}\rhead{}
@@ -55,10 +33,6 @@
         \cfoot{{\thepage}}
         \rfoot{}
   \renewcommand{\headrulewidth}{0pt}
-%  \renewcommand{\footrulewidth}{0.4pt}
-%\def\HG{{\bf HG-GalAct }}
-
-\label{coverpage}
 
 \renewcommand{\figurename}{\bf Şekil}
 \renewcommand{\tablename}{\bf Tablo}
@@ -66,19 +40,11 @@
 \renewcommand{\refname}{Referanslar}
 \renewcommand{\listfigurename}{Şekiller}
 \renewcommand{\listtablename}{Tablolar}
-%\renewcommand{\familydefault}{\sfdefault}
+
 
 \newpage
 \phantom{22}
 \vspace{-3cm}
-
-% % % {\selectlanguage{turkish}\bfseries\color{red} \small Başvuru Formunun ``Bütçe ve Gerekçesi (13. Madde)'' dışındaki bölümleri toplamda Arial, 9 yazı tipinde 20 sayfayı geçmemelidir!}
-% % % 
-% % % \begin{center}
-% % % 	\selectlanguage{turkish}\bfseries \footnotesize Kariyer proje önerisi değerlendirme formuna \\ \url{http://www.tubitak.gov.tr/tubitak_content_files/ARDEB/destek_prog/danisman_panelist/3501_DA_Panelist_Proje_Onerisi_Degerlendirme_Formu.doc} \\
-% % % 	adresinden ulaşabilirsiniz.
-% % % \end{center}
-
 
 \begin{center}
 \includegraphics[width=100px]{tubitak_logo.jpg}
@@ -101,8 +67,6 @@
 \medskip
 { \textbf{ PROJE SONUÇ RAPORU}}
 \bigskip
-
-
 
 
 
@@ -182,7 +146,10 @@ ANKARA}
 \bigskip
 \pagenumbering{roman}
 \setcounter{page}{1}
+
 \begin{center}
+
+  
 {\LARGE \bf ÖNSÖZ}
 \end{center}
 \addcontentsline{toc}{section}{ÖNSÖZ}
@@ -229,11 +196,11 @@ yapmıştır.
 \newpage \setlength{\parskip}{3mm}
 \phantom{ss}
 \vspace{-2.5cm}
+\sectionfont{\centering}
 
-\begin{center}
-{\bf \Large ÖZET} 
-\end{center}
+\section*{ÖZET}
 \addcontentsline{toc}{section}{ÖZET}
+
 \noindent
 
 Bu projede $\ldots$
@@ -244,11 +211,10 @@ Bu projede $\ldots$
 \phantom{ss}
 \vspace{-2.5cm}
 
-
-\begin{center}
-{\bf \Large ABSTRACT}
-\end{center}
+\section*{ABSTRACT}
 \addcontentsline{toc}{section}{ABSTRACT}
+
+
 \noindent
 
 In this project $\ldots$
@@ -256,13 +222,16 @@ In this project $\ldots$
 {\bf Keywords:} 1, 2, 3, 4
 
 \newpage
+
+
+\renewcommand{\thesection}{\arabic{section}.}
+
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
-\begin{center}
-{\bf \Large 1. GİRİŞ}
-\end{center}
-\addcontentsline{toc}{section}{1. GİRİŞ}
+
+\section{GİRİŞ}
+
 
 \bigskip
 \noindent
@@ -273,71 +242,65 @@ In this project $\ldots$
 \noindent
 
 \clearpage
-\begin{center}
-{\bf \Large 2. LİTERATÜR ÖZETİ}
-\end{center}
-\addcontentsline{toc}{section}{2. LİTERATÜR ÖZETİ}
+\section {LİTERATÜR ÖZETİ}
+
 
 \lipsum[2-4]
 
-\begin{center}
-{\bf \Large 3. GEREÇ VE YÖNTEM} 
-\end{center}
-\addcontentsline{toc}{section}{3. GEREÇ VE YÖNTEM}
-\noindent
+\section{GEREÇ VE YÖNTEM} 
 
-{\bf \large 3.1. Alt başlık 1}
-\addcontentsline{toc}{subsection}{3.1. Alt başlık 1}
+
+
+\subsection{Alt başlık 1}
+
 
 \lipsum[4-5]
 
-{\bf \large 3.2. Alt başlık 2}
-\addcontentsline{toc}{subsection}{3.2. Alt başlık 2}
+\subsection{Alt başlık 2}
+
 
 \lipsum[6-7]
 
-{\bf 3.2.1. Daha da alt başlık }
-\addcontentsline{toc}{subsubsection}{3.2.1. Daha da alt başlık}
+\subsubsection{Daha da alt başlık }
 
 \lipsum[8-9]
 
 \clearpage
-\begin{center}
-{\bf \Large 4. BULGULAR}
-\end{center}
-\addcontentsline{toc}{section}{4. BULGULAR}
+
+\section{BULGULAR}
+
 \noindent
 
 \lipsum[9-10]
 
-{\bf \large 4.1. Alt başlık}
-\addcontentsline{toc}{subsection}{4.1. Alt başlık}
+\subsection{Alt başlık 1}
+
 
 \lipsum[11-12]
 
-{\bf 4.1.1. Daha da alt başlık }
-\addcontentsline{toc}{subsubsection}{4.1.1. Daha da alt başlık}
+\subsubsection{Daha da alt başlık }
+
 
 \lipsum[13-14]
 
 
 \clearpage
 
-\begin{center}
-{\bf \Large 5. SONUÇ}
-\end{center}
-\addcontentsline{toc}{section}{5. SONUÇ}
+\section{SONUÇ}
+
 
 \lipsum[15-16]
 
-\noindent
-{\bf \Large 5.1. Öneriler}
-\addcontentsline{toc}{section}{5.1. Öneriler}
+
+
+\subsection{Öneriler}
+
 
 \lipsum[17-18]
 
 
 
+\sectionfont{\raggedright}
 {\small 
 \bibliographystyle{plain}
 \bibliography{mypapers}
