@@ -1,0 +1,351 @@
+\documentclass[11pt]{article}
+%\usepackage{helvet}
+\usepackage{lastpage, fancyhdr,color,amsmath,amssymb,amsfonts,amscd, graphicx,latexsym,multirow}
+\usepackage{makecell}
+\usepackage{lipsum}
+\usepackage{eurosym}
+\usepackage[all]{xy}
+\pagestyle{empty}
+%\usepackage[turkish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\setlength\voffset{-1in}
+\setlength\hoffset{-1in}
+\setlength\topmargin{3cm}
+\setlength\oddsidemargin{2.5cm}
+\setlength\textheight{8in}
+\setlength\textwidth{6.51in}
+\setlength\footskip{1in}
+\setlength\headheight{12pt}
+\setlength\headsep{0.06in}
+\usepackage{tikz}
+%plus4mm minus3mm}
+\usepackage{caption, subcaption, amsfonts}
+\usepackage{setspace}
+\usepackage{epstopdf}
+\usepackage{relsize}
+\usepackage{pgf, float}
+\usepackage{url}
+\newcommand{\gal}{Gal({\mathbb Q})}
+\newcommand{\N}{\mathbb N}
+\newcommand{\F}{\mathcal F}
+\renewcommand{\H}{\mathcal H}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R} 
+\newcommand{\C}{\mathbb C}
+\newcommand{\p}{\mathbb P}
+\newcommand{\B}{\mathbb B}
+\def\modorb{\mbox{$\otimes\hspace{-1.5mm}-\!\!\!-\!\!\!-\hspace{-1.5mm}\circledast$}}
+\hyphenation{or-bi-fold}
+%\input{defs.tex}
+
+%\usepackage[usenames,dvipsnames]{color}
+%\usepackage{epsfig}
+
+
+% ’
+
+\definecolor{light-gray}{gray}{0.55}
+\newcommand\Note[1]{\textcolor{red}{{#1}}}
+\begin{document}
+\pagestyle{fancy}
+   \lhead{}\rhead{}
+   \lfoot{\textcolor{light-gray}{\small Proje Sonuç Raporu}}
+        \cfoot{{\thepage}}
+        \rfoot{}
+  \renewcommand{\headrulewidth}{0pt}
+%  \renewcommand{\footrulewidth}{0.4pt}
+%\def\HG{{\bf HG-GalAct }}
+
+\label{coverpage}
+
+\renewcommand{\figurename}{\bf Şekil}
+\renewcommand{\tablename}{\bf Tablo}
+\renewcommand{\contentsname}{İçindekiler}
+\renewcommand{\refname}{Referanslar}
+\renewcommand{\listfigurename}{Şekiller}
+\renewcommand{\listtablename}{Tablolar}
+%\renewcommand{\familydefault}{\sfdefault}
+
+\newpage
+\phantom{22}
+\vspace{-3cm}
+
+% % % {\selectlanguage{turkish}\bfseries\color{red} \small Başvuru Formunun ``Bütçe ve Gerekçesi (13. Madde)'' dışındaki bölümleri toplamda Arial, 9 yazı tipinde 20 sayfayı geçmemelidir!}
+% % % 
+% % % \begin{center}
+% % % 	\selectlanguage{turkish}\bfseries \footnotesize Kariyer proje önerisi değerlendirme formuna \\ \url{http://www.tubitak.gov.tr/tubitak_content_files/ARDEB/destek_prog/danisman_panelist/3501_DA_Panelist_Proje_Onerisi_Degerlendirme_Formu.doc} \\
+% % % 	adresinden ulaşabilirsiniz.
+% % % \end{center}
+
+
+\begin{center}
+\includegraphics[keepaspectratio]{tubitak.png}
+
+\bigskip
+\bigskip
+
+
+\bigskip
+{\fontsize{15}{10}\selectfont 
+\bigskip
+
+
+\bigskip
+\medskip
+{ \textbf{\Huge PROJE BAŞLIĞI \\}}}
+
+
+\bigskip
+\medskip
+{ \textbf{ PROJE SONUÇ RAPORU}}
+\bigskip
+
+
+
+
+
+\end{center}
+
+
+\bigskip
+
+\bigskip
+
+
+\thispagestyle{empty}
+
+
+\begin{center}
+\medskip
+{\LARGE \textbf{Program Kodu:} 1001}
+
+\bigskip
+{\LARGE \textbf{Proje No:} 123E456}
+
+\bigskip
+{\LARGE Proje Yürütücüsü:\\
+\textbf{Can Alkan}}
+
+\end{center}
+
+\bigskip
+
+
+\bigskip
+\noindent
+{\large
+\noindent
+\underline{\bf Bursiyerler:}
+
+\noindent
+Mr. Smith
+
+\noindent
+Amy Pond
+
+\noindent
+Rory Williams
+
+\noindent \underline{\bf Projeden desteklenmeyen diğer araştırmacılar:}
+
+\noindent
+Clara Oswald:  Destekleyen kurum çalışanı
+
+\noindent
+Rose Tyler: Bilkent Üniversitesi lisans öğrencisi (proje sırasında)
+
+
+}
+
+
+
+\bigskip
+
+
+
+
+
+\begin{center}
+{\Large TEMMUZ 2016
+
+\vspace{1mm}
+ANKARA}
+\end{center}
+
+
+\linespread{1.5}
+
+\newpage\setlength{\parskip}{3mm} 
+\onehalfspacing
+\bigskip
+\pagenumbering{roman}
+\setcounter{page}{1}
+\begin{center}
+{\LARGE \bf ÖNSÖZ}
+\end{center}
+\addcontentsline{toc}{section}{ÖNSÖZ}
+
+
+Proje süresince proje ekibinin şu yayınları hazırlanmıştır: 
+
+\begin{itemize}
+\item paper 1, 2014.
+  
+\end{itemize}
+
+Proje süresince proje ekibinin şu bildiriler sunulmuştur:
+ 
+\begin{itemize}
+\item Sunum 1, 2015.
+  
+\end{itemize}
+
+Proje kapsamında desteklenen aşağıdaki bursiyerler,  lisansüstü eğitimlerini 
+proje yürütücüsünün danışmanlığında
+yapmıştır.
+ 
+\begin{itemize}
+\item Amy Pond, Bilkent Üniversitesi Bilgisayar Mühendisliği, Yüksek Lisans, Ağustos 2014.
+\item Rory Williams, Bilkent Üniversitesi Bilgisayar Mühendisliği, Yüksek Lisans, Aralık 2014.
+\end{itemize}
+
+
+\bigskip
+\hfill Can Alkan
+
+\hfill Ankara, Temmuz 2016
+\newpage
+
+\setlength{\parskip}{1mm} 
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+
+
+\newpage \setlength{\parskip}{3mm}
+\phantom{ss}
+\vspace{-2.5cm}
+
+\begin{center}
+{\bf \Large ÖZET} 
+\end{center}
+\addcontentsline{toc}{section}{ÖZET}
+\noindent
+
+Bu projede $\ldots$
+
+{\bf Anahtar kelimeler:} 1, 2, 3, 4
+
+\newpage
+\phantom{ss}
+\vspace{-2.5cm}
+
+
+\begin{center}
+{\bf \Large ABSTRACT}
+\end{center}
+\addcontentsline{toc}{section}{ABSTRACT}
+\noindent
+
+In this project $\ldots$
+
+{\bf Keywords:} 1, 2, 3, 4
+
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\begin{center}
+{\bf \Large 1. GİRİŞ}
+\end{center}
+\addcontentsline{toc}{section}{1. GİRİŞ}
+
+\bigskip
+\noindent
+
+\lipsum[1-2]
+
+
+\noindent
+
+\clearpage
+\begin{center}
+{\bf \Large 2. LİTERATÜR ÖZETİ}
+\end{center}
+\addcontentsline{toc}{section}{2. LİTERATÜR ÖZETİ}
+
+\lipsum[2-4]
+
+\begin{center}
+{\bf \Large 3. GEREÇ VE YÖNTEM} 
+\end{center}
+\addcontentsline{toc}{section}{3. GEREÇ VE YÖNTEM}
+\noindent
+
+{\bf \large 3.1. Alt başlık 1}
+\addcontentsline{toc}{subsection}{3.1. Alt başlık 1}
+
+\lipsum[4-5]
+
+{\bf \large 3.2. Alt başlık 2}
+\addcontentsline{toc}{subsection}{3.2. Alt başlık 2}
+
+\lipsum[6-7]
+
+{\bf 3.2.1. Daha da alt başlık }
+\addcontentsline{toc}{subsubsection}{3.2.1. Daha da alt başlık}
+
+\lipsum[8-9]
+
+\clearpage
+\begin{center}
+{\bf \Large 4. BULGULAR}
+\end{center}
+\addcontentsline{toc}{section}{4. BULGULAR}
+\noindent
+
+\lipsum[9-10]
+
+{\bf \large 4.1. Alt başlık}
+\addcontentsline{toc}{subsection}{4.1. Alt başlık}
+
+\lipsum[11-12]
+
+{\bf 4.1.1. Daha da alt başlık }
+\addcontentsline{toc}{subsubsection}{4.1.1. Daha da alt başlık}
+
+\lipsum[13-14]
+
+
+\clearpage
+
+\begin{center}
+{\bf \Large 5. SONUÇ}
+\end{center}
+\addcontentsline{toc}{section}{5. SONUÇ}
+
+\lipsum[15-16]
+
+\noindent
+{\bf \Large 5.1. Öneriler}
+\addcontentsline{toc}{section}{5.1. Öneriler}
+
+\lipsum[17-18]
+
+
+
+{\small 
+\bibliographystyle{plain}
+\bibliography{mypapers}
+
+}
+
+
+
+
+\label{endsectionb1}
+\end{document}
