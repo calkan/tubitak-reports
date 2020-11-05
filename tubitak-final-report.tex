@@ -21,10 +21,12 @@
 \usepackage{relsize}
 \usepackage{pgf, float}
 \usepackage{url}
-
+\usepackage{natbib}
+\usepackage{csquotes}
 
 \definecolor{light-gray}{gray}{0.55}
 
+\title{TÜBİTAK Sonuç Raporu Şablonu}
 
 \begin{document}
 \pagestyle{fancy}
@@ -47,6 +49,8 @@
 \vspace{-3cm}
 
 \begin{center}
+% Logo copyright belongs to TUBITAK
+% downloaded from https://www.tubitak.gov.tr/sites/default/files/tubitak_logo.jpg
 \includegraphics[width=100px]{tubitak_logo.jpg}
 
 \bigskip
@@ -68,8 +72,6 @@
 { \textbf{ PROJE SONUÇ RAPORU}}
 \bigskip
 
-
-
 \end{center}
 
 
@@ -89,8 +91,7 @@
 {\LARGE \textbf{Proje No:} 123E456}
 
 \bigskip
-{\LARGE Proje Yürütücüsü:\\
-\textbf{Can Alkan}}
+{\LARGE Proje Yürütücüsü: \textbf{Doctor Who}}
 
 \end{center}
 
@@ -104,7 +105,7 @@
 \underline{\bf Bursiyerler:}
 
 \noindent
-Mr. Smith
+Rose Tyler
 
 \noindent
 Amy Pond
@@ -118,7 +119,7 @@ Rory Williams
 Clara Oswald:  Destekleyen kurum çalışanı
 
 \noindent
-Rose Tyler: Bilkent Üniversitesi lisans öğrencisi (proje sırasında)
+Martha Jones: Bilkent Üniversitesi lisans öğrencisi (proje sırasında)
 
 
 }
@@ -132,7 +133,7 @@ Rose Tyler: Bilkent Üniversitesi lisans öğrencisi (proje sırasında)
 
 
 \begin{center}
-{\Large TEMMUZ 2016
+{\Large MART 2017
 
 \vspace{1mm}
 ANKARA}
@@ -154,35 +155,7 @@ ANKARA}
 \end{center}
 \addcontentsline{toc}{section}{ÖNSÖZ}
 
-
-Proje süresince proje ekibinin şu yayınları hazırlanmıştır: 
-
-\begin{itemize}
-\item paper 1, 2014.
-  
-\end{itemize}
-
-Proje süresince proje ekibinin şu bildiriler sunulmuştur:
- 
-\begin{itemize}
-\item Sunum 1, 2015.
-  
-\end{itemize}
-
-Proje kapsamında desteklenen aşağıdaki bursiyerler,  lisansüstü eğitimlerini 
-proje yürütücüsünün danışmanlığında
-yapmıştır.
- 
-\begin{itemize}
-\item Amy Pond, Bilkent Üniversitesi Bilgisayar Mühendisliği, Yüksek Lisans, Ağustos 2014.
-\item Rory Williams, Bilkent Üniversitesi Bilgisayar Mühendisliği, Yüksek Lisans, Aralık 2014.
-\end{itemize}
-
-
-\bigskip
-\hfill Can Alkan
-
-\hfill Ankara, Temmuz 2016
+\input{sonuc-onsoz}
 \newpage
 
 \setlength{\parskip}{1mm} 
@@ -201,26 +174,13 @@ yapmıştır.
 \section*{ÖZET}
 \addcontentsline{toc}{section}{ÖZET}
 
-\noindent
-
-Bu projede $\ldots$
-
-{\bf Anahtar kelimeler:} 1, 2, 3, 4
+\input{sonuc-ozet}
 
 \newpage
-\phantom{ss}
-\vspace{-2.5cm}
-
 \section*{ABSTRACT}
 \addcontentsline{toc}{section}{ABSTRACT}
 
-
-\noindent
-
-In this project $\ldots$
-
-{\bf Keywords:} 1, 2, 3, 4
-
+\input{sonuc-abstract}
 \newpage
 
 
@@ -232,83 +192,38 @@ In this project $\ldots$
 
 \section{GİRİŞ}
 
-
-\bigskip
-\noindent
-
-\lipsum[1-2]
-
-
-\noindent
+\input{sonuc-giris}
 
 \clearpage
 \section {LİTERATÜR ÖZETİ}
 
-
-\lipsum[2-4]
+\input{sonuc-literatur}
 
 \section{GEREÇ VE YÖNTEM} 
 
-
-
-\subsection{Alt başlık 1}
-
-
-\lipsum[4-5]
-
-\subsection{Alt başlık 2}
-
-
-\lipsum[6-7]
-
-\subsubsection{Daha da alt başlık }
-
-\lipsum[8-9]
+\input{sonuc-gerecveyontem}
 
 \clearpage
 
 \section{BULGULAR}
 
 \noindent
+\input{sonuc-bulgular}
 
-\lipsum[9-10]
-
-\subsection{Alt başlık 1}
-
-
-\lipsum[11-12]
-
-\subsubsection{Daha da alt başlık }
-
-
-\lipsum[13-14]
 
 
 \clearpage
 
 \section{SONUÇ}
 
-
-\lipsum[15-16]
-
-
-
-\subsection{Öneriler}
-
-
-\lipsum[17-18]
-
+\input{sonuc-sonuc}
 
 
 \sectionfont{\raggedright}
 {\small 
-\bibliographystyle{plain}
+\bibliographystyle{tubitak}
 \bibliography{mypapers}
 
 }
 
-
-
-
-\label{endsectionb1}
 \end{document}
